@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>9c624888-c487-4462-a8bf-22a24781ce5f.schema:epam.public</OriginalElement>
+  <nodes>
+    <node x="454.88888888888886" y="735.0">9c624888-c487-4462-a8bf-22a24781ce5f.table:epam.public.flights_users</node>
+    <node x="179.66666666666666" y="680.0">9c624888-c487-4462-a8bf-22a24781ce5f.table:epam.public.requests</node>
+    <node x="0.5" y="201.0">9c624888-c487-4462-a8bf-22a24781ce5f.table:epam.public.status</node>
+    <node x="120.5" y="124.0">9c624888-c487-4462-a8bf-22a24781ce5f.table:epam.public.trucks</node>
+    <node x="440.5" y="0.0">9c624888-c487-4462-a8bf-22a24781ce5f.table:epam.public.roles</node>
+    <node x="380.5" y="135.0">9c624888-c487-4462-a8bf-22a24781ce5f.table:epam.public.users</node>
+    <node x="92.27777777777777" y="402.0">9c624888-c487-4462-a8bf-22a24781ce5f.table:epam.public.flights</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="9c624888-c487-4462-a8bf-22a24781ce5f.table:epam.public.flights_users" target="9c624888-c487-4462-a8bf-22a24781ce5f.table:epam.public.flights">
+      <point x="-30.0" y="-48.0" />
+      <point x="484.88888888888886" y="650.0" />
+      <point x="272.27777777777777" y="650.0" />
+      <point x="60.0" y="114.0" />
+    </edge>
+    <edge source="9c624888-c487-4462-a8bf-22a24781ce5f.table:epam.public.requests" target="9c624888-c487-4462-a8bf-22a24781ce5f.table:epam.public.users">
+      <point x="55.0" y="-103.0" />
+      <point x="344.66666666666663" y="660.0" />
+      <point x="470.1296296296296" y="660.0" />
+      <point x="470.1296296296296" y="377.0" />
+      <point x="490.5" y="377.0" />
+      <point x="0.0" y="103.0" />
+    </edge>
+    <edge source="9c624888-c487-4462-a8bf-22a24781ce5f.table:epam.public.users" target="9c624888-c487-4462-a8bf-22a24781ce5f.table:epam.public.roles">
+      <point x="0.0" y="-103.0" />
+      <point x="0.0" y="37.0" />
+    </edge>
+    <edge source="9c624888-c487-4462-a8bf-22a24781ce5f.table:epam.public.flights" target="9c624888-c487-4462-a8bf-22a24781ce5f.table:epam.public.status">
+      <point x="-80.0" y="-114.0" />
+      <point x="132.27777777777777" y="377.0" />
+      <point x="50.5" y="377.0" />
+      <point x="0.0" y="37.0" />
+    </edge>
+    <edge source="9c624888-c487-4462-a8bf-22a24781ce5f.table:epam.public.flights" target="9c624888-c487-4462-a8bf-22a24781ce5f.table:epam.public.trucks">
+      <point x="0.0" y="-114.0" />
+      <point x="212.27777777777777" y="377.0" />
+      <point x="240.5" y="377.0" />
+      <point x="0.0" y="114.0" />
+    </edge>
+    <edge source="9c624888-c487-4462-a8bf-22a24781ce5f.table:epam.public.flights" target="9c624888-c487-4462-a8bf-22a24781ce5f.table:epam.public.users">
+      <point x="80.0" y="-114.0" />
+      <point x="292.27777777777777" y="377.0" />
+      <point x="417.1666666666667" y="377.0" />
+      <point x="-73.33333333333331" y="103.0" />
+    </edge>
+    <edge source="9c624888-c487-4462-a8bf-22a24781ce5f.table:epam.public.requests" target="9c624888-c487-4462-a8bf-22a24781ce5f.table:epam.public.flights">
+      <point x="-55.0" y="-103.0" />
+      <point x="234.66666666666666" y="660.0" />
+      <point x="152.27777777777777" y="660.0" />
+      <point x="-60.0" y="114.0" />
+    </edge>
+    <edge source="9c624888-c487-4462-a8bf-22a24781ce5f.table:epam.public.flights_users" target="9c624888-c487-4462-a8bf-22a24781ce5f.table:epam.public.users">
+      <point x="30.0" y="-48.0" />
+      <point x="544.8888888888889" y="377.0" />
+      <point x="563.8333333333333" y="377.0" />
+      <point x="73.33333333333331" y="103.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="309.6864406779661" y="242.6349413298566" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Key columns</Category>
+    <Category>Columns</Category>
+  </Categories>
+</Diagram>
+

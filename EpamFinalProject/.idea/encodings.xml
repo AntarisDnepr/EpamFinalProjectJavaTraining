@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/lib" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sql" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/resources.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/resources_en.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/resources_ru.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/Path.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/db/DBExtractEntity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/db/DBManager.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/db/FieldsDB.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/db/Role.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/db/Status.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/db/bean/FlightUserTruckBean.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/db/bean/RequestUserBean.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/db/entity/Entity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/db/entity/Flight.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/db/entity/Request.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/db/entity/Truck.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/db/entity/User.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/db/util/JdbcUtil.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/db/util/ValidUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/exception/AppException.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/exception/DBException.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/exception/Messages.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/Controller.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/UtilsWeb.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/command/Command.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/command/CommandContainer.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/command/admin/DeleteFlightCommand.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/command/admin/DeleteTruckCommand.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/command/admin/DeleteUserCommand.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/command/admin/EditTruckCommand.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/command/admin/EditUserCommand.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/command/admin/FindUserCommand.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/command/admin/ListTrucksCommand.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/command/admin/ListUsersCommand.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/command/admin/RegistrationUserCommand.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/command/admin/TruckAddCommand.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/command/common/ChangeLocaleCommand.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/command/common/ListFlightsCommand.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/command/common/LoginCommand.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/command/common/LogoutUserCommand.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/command/common/NoCommand.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/command/common/PageErrorCommand.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/command/common/SortFlightsCommand.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/command/common/SortFlightsTypesContainer.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/command/common/ViewSettingsCommand.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/command/dispatcher/ApproveRequestCommand.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/command/dispatcher/ChangeFlightStatusCommand.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/command/dispatcher/DeleteRequestCommand.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/command/dispatcher/FlightCreateCommand.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/command/dispatcher/ListRequestsCommand.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/command/driver/DriverPersonalCommand.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/command/driver/FlightCompletedCommand.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/command/driver/RequestCreateCommand.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/filter/CommandAccessST4Filter.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/filter/EncodingST4Filter.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ua/nure/revuk/SummaryTask4/web/listener/ContextListener.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web" charset="UTF-8" />
+  </component>
+</project>

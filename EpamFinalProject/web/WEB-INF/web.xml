@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <display-name>Epam Final Project</display-name>
+
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!--============================================================
+        Controller
+    =============================================================-->
+    <servlet>
+        <servlet-name>Controller</servlet-name>
+        <servlet-class>ua.nure.revuk.SummaryTask4.web.Controller</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Controller</servlet-name>
+        <url-pattern>/controller</url-pattern>
+    </servlet-mapping>
+
+
+    <!--============================================================
+        Encoding support filter
+    =============================================================-->
+    <filter>
+        <filter-name>EncodingFilter</filter-name>
+        <filter-class>ua.nure.revuk.SummaryTask4.web.filter.EncodingST4Filter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>EncodingFilter</filter-name>
+        <url-pattern>/WEB-INF/jsp/*</url-pattern>
+        <servlet-name>Controller</servlet-name>
+    </filter-mapping>
+
+
+    <!--============================================================
+        Security filter.
+        1) admin: admin commands
+        2) dispatcher: dispatcher commands
+        3) driver: driver commands
+        4) commons: commands for all roles
+        5) out-of-control: commands without access control
+        Delimiter - space/tab
+    =============================================================-->
+    <filter>
+        <filter-name>
+            CommandAccessFilter
+        </filter-name>
+        <filter-class>
+            ua.nure.revuk.SummaryTask4.web.filter.CommandAccessST4Filter
+        </filter-class>
+        <init-param>
+            <param-name>admin</param-name>
+            <param-value>
+                listTrucks truckAdd registrationUser listUsers deleteTruck deleteUser editTruck editUser
+                flightCreate listRequests approveRequest deleteRequest changeFlightStatus findUser deleteFlight
+            </param-value>
+        </init-param>
+        <init-param>
+            <param-name>dispatcher</param-name>
+            <param-value>
+                flightCreate listRequests approveRequest deleteRequest changeFlightStatus listTrucks
+            </param-value>
+        </init-param>
+        <init-param>
+            <param-name>driver</param-name>
+            <param-value>
+                requestCreate driverPersonal flightCompleted deleteRequest
+            </param-value>
+        </init-param>
+        <init-param>
+            <param-name>common</param-name>
+            <param-value>
+                logout noCommand viewSettings changeLocale listFlights sortFlights pageOk
+            </param-value>
+        </init-param>
+        <init-param>
+            <param-name>out-of-control</param-name>
+            <param-value>login pageError</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>CommandAccessFilter</filter-name>
+        <servlet-name>Controller</servlet-name>
+    </filter-mapping>
+
+    <!--============================================================
+        Context listener
+    =============================================================-->
+    <listener>
+        <listener-class>ua.nure.revuk.SummaryTask4.web.listener.ContextListener</listener-class>
+    </listener>
+
+    <!--============================================================
+        Error page
+    =============================================================-->
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location>/WEB-INF/jsp/error_page.jsp</location>
+    </error-page>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/jsp/error_page.jsp</location>
+    </error-page>
+
+
+    <context-param>
+        <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
+        <param-value>resources</param-value>
+    </context-param>
+    <context-param>
+        <param-name>javax.servlet.jsp.jstl.fmt.locale</param-name>
+        <param-value>ru</param-value>
+    </context-param>
+    <context-param>
+        <param-name>locales</param-name>
+        <param-value>/Resources/locales.properties</param-value>
+    </context-param>
+
+</web-app>

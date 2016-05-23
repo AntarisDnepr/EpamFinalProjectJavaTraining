@@ -1,0 +1,177 @@
+<%--=========================================================================== 
+Header (top area). 
+===========================================================================--%>
+
+<%@ include file="/WEB-INF/jspf/directive/page.jspf" %>
+<%@ include file="/WEB-INF/jspf/directive/taglib.jspf" %>
+
+<tr>
+    <td id="header">
+        <c:if test="${not empty user}">
+            <%--===========================================================================
+            This is the user menu.
+            ===========================================================================--%>
+            <div id="leftHeader">
+                <c:choose>
+                    <%--===========================================================================
+                    This way we define the ADMIN MENU.
+                    ===========================================================================--%>
+                    <c:when test="${userRole.name == 'admin' }">
+
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" style="width:140px"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <fmt:message key="titleFlights"/> <span class="caret"/>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="/controller?command=listFlights"><fmt:message
+                                        key="titleButtonAllFlights"/></a></li>
+                                <li><a href="/controller?command=flightCreate"><fmt:message
+                                        key="titleCreateFlight"/></a>
+                                </li>
+                                <li><a href="/controller?command=listFlights&approve=approve"><fmt:message
+                                        key="titleButtonShowWhoApproved"/></a>
+                                </li>
+                                <li role="separator" class="divider"/>
+                            </ul>
+                        </div>
+
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" style="width:140px"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <fmt:message key="titleRequests"/> <span class="caret"/>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="/controller?command=listRequests"><fmt:message
+                                        key="titleButtonAllRequests"/></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" style="width:140px"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <fmt:message key="titleTrucks"/> <span class="caret"/>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="/controller?command=listTrucks"><fmt:message
+                                        key="titleButtonAllTrucks"/></a></li>
+                                <li><a href="/controller?command=truckAdd"><fmt:message key="titleAddTruck"/></a></li>
+                                <li><a href="/controller?command=listTrucks&filterSearchTrucks=notServiceable"><fmt:message
+                                        key="titleButtonNotServiceable"/></a></li>
+                                <li><a href="/controller?command=listTrucks&filterSearchTrucks=refrigerator"><fmt:message
+                                        key="titleButtonRefrigerators"/></a></li>
+                                <li><a href="/controller?command=listTrucks&filterSearchTrucks=lorryWithSides"><fmt:message
+                                        key="titleButtonLorryWithSides"/></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" style="width:140px"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <fmt:message key="titleUsers"/> <span class="caret"/>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="/controller?command=listUsers"><fmt:message key="titleButtonAllUsers"/></a>
+                                </li>
+                                <li><a href="/controller?command=registrationUser"><fmt:message
+                                        key="titleRegistrationUser"/></a></li>
+                                <li><a href="/controller?command=findUser"><fmt:message
+                                        key="titleButtonFindUser"/></a></li>
+                            </ul>
+                        </div>
+                    </c:when>
+
+                    <%--===========================================================================
+                    This way we define the DRIVER MENU.
+                    ===========================================================================--%>
+                    <c:when test="${userRole.name == 'driver'}">
+                        <form action="controller" method="get">
+                            <button class="btn btn-default" name="command" value="listFlights" style="width:140px">
+                                <fmt:message key="titleButtonAllFlights"/></button>
+                            <button class="btn btn-default" name="command" value="driverPersonal" style="width:140px">
+                                <fmt:message key="titlePersonalOffice"/></button>
+                        </form>
+                    </c:when>
+
+                    <%--===========================================================================
+                    This way we define the DISPATCHER MENU.
+                    ===========================================================================--%>
+                    <c:when test="${userRole.name == 'dispatcher'}">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" style="width:140px"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <fmt:message key="titleFlights"/> <span class="caret"/>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="/controller?command=listFlights"><fmt:message
+                                        key="titleButtonAllFlights"/></a></li>
+                                <li><a href="/controller?command=flightCreate"><fmt:message
+                                        key="titleCreateFlight"/></a>
+                                </li>
+                                <li><a href="/controller?command=listFlights&approve=approve"><fmt:message
+                                        key="titleButtonShowWhoApproved"/></a>
+                                </li>
+                                <li role="separator" class="divider"/>
+                            </ul>
+                        </div>
+
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" style="width:140px"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <fmt:message key="titleRequests"/> <span class="caret"/>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="/controller?command=listRequests"><fmt:message
+                                        key="titleButtonAllRequests"/></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" style="width:140px"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <fmt:message key="titleTrucks"/> <span class="caret"/>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="/controller?command=listTrucks"><fmt:message
+                                        key="titleButtonAllTrucks"/></a></li>
+                                <li><a href="/controller?command=listTrucks&filterSearchTrucks=notServiceable"><fmt:message
+                                        key="titleButtonNotServiceable"/></a></li>
+                                <li><a href="/controller?command=listTrucks&filterSearchTrucks=refrigerator"><fmt:message
+                                        key="titleButtonRefrigerators"/></a></li>
+                                <li><a href="/controller?command=listTrucks&filterSearchTrucks=lorryWithSides"><fmt:message
+                                        key="titleButtonLorryWithSides"/></a></li>
+                            </ul>
+                        </div>
+                    </c:when>
+                </c:choose>
+            </div>
+
+            <%--===========================================================================
+            This way we define the menu located at the right of header.
+            ===========================================================================--%>
+            <div id="rightHeader">
+                    <%--===========================================================================
+                    Type link to logout  and settings
+                    ===========================================================================--%>
+                <form action="controller" method="get">
+                        <%--===========================================================================
+                 Type user name if the user object is presented in the current session.
+                 ===========================================================================--%>
+                    <c:out value="${user.firstName} ${user.lastName}"/>
+                        <%--===========================================================================
+                        Type user role name if the user object is presented in the current session.
+                         ===========================================================================--%>
+                    <c:if test="${not empty userRole}">
+                        <c:out value="(${userRole.name})"/>
+                    </c:if>
+                    <button class="btn btn-default" name="command" value="viewSettings"><fmt:message
+                            key="rightHeaderSettings"/></button>
+                    <button class="btn btn-default" name="command" value="logout"><fmt:message
+                            key="rightHeaderLogout"/></button>
+                </form>
+                <img src="Resources/photo/users/${user.photoLink}" width="120" height="120" class="img-thumbnail">
+            </div>
+        </c:if>
+    </td>
+</tr>
+
